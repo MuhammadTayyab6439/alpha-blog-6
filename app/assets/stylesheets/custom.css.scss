@@ -1,0 +1,29 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.nav-link{
+    color: white !important;
+}
+
+.jumbotron{
+    background-image: asset-url('meeting.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+html,
+body {
+  height: 100%;
+}
+#page-content {
+    flex: 1 0 auto;
+    
+  }
+  .card-title{
+      color: green !important;
+  }
+  .card-width
+  {
+      width: 50rem;
+      margin-top: 5rem;
+  }

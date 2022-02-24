@@ -1,0 +1,24 @@
+<div class="container card-width ">
+<% @users.each do |user| %>
+<div class="card text-center mb-4">
+
+  <div class="card-header">
+    username <%= user.username if user %>
+  </div>
+  <div class="card-body">
+ 
+    <h5 class="card-title "><%= user.email %></h5>
+    
+    <p class="card-text"><%= user.articles.count %> articles</p>
+    <%= link_to "View", user_path(user), class: "btn btn-outline-success" %>
+    <%= link_to "Edit", edit_user_path(user), class: "btn btn-outline-info" %>
+    
+    
+  </div>
+  <div class="card-footer text-muted ">
+   <p> Created: <%= time_ago_in_words(user.created_at) %> ago  Updated: <%= time_ago_in_words(user.updated_at) %> ago</p>
+   
+  </div>
+ 
+</div>
+<% end %>
